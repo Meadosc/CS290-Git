@@ -9,6 +9,8 @@ app.set('port', 3000);
 
 app.get('/',function(req,res){
   res.render('home.handlebars') //We can omit the .handlebars extension as we do below
+  var randNum = Math.random();
+  res.render('Random number between 0 and 1: ' + randNum);
 });
 
 app.get('/other-page',function(req,res){
